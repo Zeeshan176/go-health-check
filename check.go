@@ -6,6 +6,13 @@ import (
 	"time"
 )
 
+/*
+	Check function is used for health check of domains.
+
+	@author Mohammad Zeeshan
+	@date January 26, 2024
+*/
+
 func Check(destination string, port string) string {
 	address := destination + ":" + port
 	timeout := time.Duration(5 * time.Second)

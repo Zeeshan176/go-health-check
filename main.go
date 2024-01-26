@@ -8,6 +8,12 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
+/*
+Main function is used for create app from cli to check health check of domains.
+
+@author Mohammad Zeeshan
+@date January 26, 2024
+*/
 func main() {
 	app := &cli.App{
 		Name:  "HealthChecker",
@@ -28,7 +34,8 @@ func main() {
 		},
 		Action: func(c *cli.Context) error {
 			port := c.String("port")
-			if c.String("port") == "" {
+			// Check if the "port" flag is set by the user
+			if !c.IsSet("port") {
 				port = "80"
 			}
 			status := Check(c.String("domain"), port)

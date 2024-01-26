@@ -9,4 +9,5 @@ Make sure you have Go installed on your machine. Clone the repository and run:
 ```bash
 go get -u github.com/Zeeshan176/go-health-check
 
-go run . --domain ["domainname"]
+go run . --domain/-d ["domainname"]
+go run . --port/-p ["localport"] --domain localhost
