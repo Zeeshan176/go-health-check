@@ -12,10 +12,8 @@ go get -u github.com/Zeeshan176/go-health-check
 go run . --domain/-d ["domainname"]
 go run . --port/-p ["localport"] --domain localhost
 
-
-```
 # for using make command use this
-
+```
 make run DOMAIN=["domain-name"]
 make docker-run DOMAIN=["pixelque.com"] PORT=["8081"]
 ```
